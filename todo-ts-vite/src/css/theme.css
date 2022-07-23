@@ -1,0 +1,17 @@
+.dark{
+    --bg-color:rgba(22, 22, 22, 0.8);
+    --normal-color:white;
+    --highlight-color: darkorange;
+    --highlight-sub:yellow;
+
+    --todo-box-color:black;
+}
+
+.def{
+    --bg-color:rgba(236, 236, 236, 0.64);
+    --normal-color:black;
+    --highlight-color: red;
+    --highlight-sub:blue;
+
+    --todo-box-color:white;
+}

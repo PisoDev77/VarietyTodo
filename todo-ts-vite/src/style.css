@@ -1,0 +1,8 @@
+@import url("./css/theme.css");
+
+@import url("./css/todo/todo.css");
+
+body{
+  background-color: var(--bg-color);
+  color: var(--normal-color);
+}
