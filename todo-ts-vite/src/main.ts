@@ -8,7 +8,7 @@ const cssMode = () =>{
     btn.innerText = "css모드";
     app?.appendChild(btn);
 
-    btn.addEventListener("click", (e: MouseEvent) => {
+    btn.addEventListener("click", () => {
         if(darkMode){
             body?.classList.replace("def", "dark");
         }else{
