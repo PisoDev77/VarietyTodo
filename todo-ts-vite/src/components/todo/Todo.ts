@@ -4,6 +4,7 @@ export class Todo {
 
     private Todo: HTMLDivElement;
     private id?: number;
+    // private content: string;
 
     private contentEl: HTMLDivElement | HTMLInputElement;
 
@@ -15,6 +16,7 @@ export class Todo {
     constructor(props: TodoType){
         this.Todo = <HTMLDivElement>document.createElement("section");
         this.id = props.id;
+        // this.content = props.content;
 
         this.contentEl = document.createElement("div");
 
@@ -71,7 +73,7 @@ export class Todo {
         this.delBtn.id = "todo-delete-button";
         
     }
-    doEdit(){
+    doEdit(): TodoType{
         const replaceChild = <HTMLInputElement>this.Todo.firstChild;
         if(replaceChild){
             const divContentEl = document.createElement("div");
@@ -80,7 +82,11 @@ export class Todo {
             divContentEl.id = String(this.id);
 
             this.chanageBtns(divContentEl, replaceChild);
-        }        
+
+            return {id: this.id, content: replaceChild.value}
+        }  else{
+            return {id:0, content:"ERROR"};
+        }      
     }
     cancelEdit(){
         const replaceChild = this.Todo.firstChild;

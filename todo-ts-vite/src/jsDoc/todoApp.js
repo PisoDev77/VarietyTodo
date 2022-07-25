@@ -1,6 +1,7 @@
 
 /**
- * @param {import("./todo/TodoNav.js")} TodoNav
+ * @import 
+ * 
  */
 
 class TodoApp {

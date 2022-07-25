@@ -3,19 +3,26 @@ import { TodoType } from "./Types";
 
 export class TodoList {
 
+    private header: string;
+
     TodoHandler: TodoHandler;
     isEditMode: boolean;
 
     TodoList: HTMLDivElement;
     private HeaderTodoList: HTMLHeadElement;
 
-    constructor(){
+    constructor(header: string){
 
-        this.TodoHandler = new TodoHandler();
+        this.header = header;
+
         this.isEditMode = false;
 
         this.TodoList = <HTMLDivElement>document.createElement("article");
         this.HeaderTodoList = <HTMLHeadElement>document.createElement("h3");
+
+        this.TodoHandler = new TodoHandler(header);
+
+        this.renderTodos();
 
     }
 
@@ -68,6 +75,7 @@ export class TodoList {
         this.TodoHandler.getTodos().map((todo)=>{
             this.TodoList.appendChild(todo.getTodo());
         });
+
     }
 
     getListEl(){

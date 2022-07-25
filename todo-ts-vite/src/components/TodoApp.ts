@@ -24,8 +24,8 @@ export class TodoApp {
     constructor(){
         this.TodoContainer = <HTMLDivElement>document.createElement("main");
         this.todoNav = new TodoNav();
-        this.todoList = new TodoList();
-        this.notTodoList = new TodoList();
+        this.todoList = new TodoList("Todo");
+        this.notTodoList = new TodoList("Not Todo");
         this.todoForm = new TodoForm();
 
         this.todoEvents = new TodoEvents(this.TodoContainer, this.todoForm, this.todoList, this.notTodoList);
