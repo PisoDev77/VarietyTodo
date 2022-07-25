@@ -1,11 +1,58 @@
 
 #todo-container{
     min-width: 300px;
-    border-radius: 15px;
+    border-radius: var(--border-radius);
     background-color: var(--todo-box-color);
+}
+
+#todo-container button{
+    border-radius: var(--border-radius);
+    border: none;
+    padding:5px;
 }
 
 #todo-nav{
     display: flex;
     justify-content: space-evenly;
+
+    font-size: var(--font-lar-size);
+    font-weight: 900;
+
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
+
+#todo-form{
+    display: flex;
+}
+#todo-form-content{
+    flex-grow: 7;
+    background-color: var(--bg-color);
+    color: var(--normal-color);
+
+    text-align: center;
+    font-size: var(--font-more-size);
+
+    margin: 5px;
+    border-radius: var(--border-radius);
+}
+#todo-form > button {
+    flex-grow: 3;
+
+    margin: 5px;
+}
+
+#todo-list > section{
+    display: flex;
+    margin-bottom: 5px;
+}
+#todo-list > section > :nth-child(1){
+    flex-grow: 8;
+    padding:5px;
+}
+#todo-list > section > button{
+    margin: 5px;
+}
+
+
+

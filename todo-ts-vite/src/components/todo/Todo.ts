@@ -45,7 +45,7 @@ export class Todo {
     editMode(){
         const replaceChild = this.Todo.firstChild;
         if(replaceChild){
-            const inputContentEl = document.createElement("input");
+            const inputContentEl = document.createElement("input"); 
             inputContentEl.type="text";
             this.tmpContent = this.contentEl.innerText;
             inputContentEl.value=this.tmpContent;
@@ -75,6 +75,7 @@ export class Todo {
         const replaceChild = <HTMLInputElement>this.Todo.firstChild;
         if(replaceChild){
             const divContentEl = document.createElement("div");
+            this.contentEl = divContentEl; // 요 부분이 문제였음
             divContentEl.innerText = replaceChild.value;
             divContentEl.id = String(this.id);
 

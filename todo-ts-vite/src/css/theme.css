@@ -1,3 +1,10 @@
+:root{
+    --font-def-size: 11pt;
+    --font-more-size: 13pt;
+    --font-lar-size: 20pt;
+
+    --border-radius: 15px;
+}
 .dark{
     --bg-color:rgba(22, 22, 22, 0.8);
     --normal-color:white;
@@ -5,6 +12,9 @@
     --highlight-sub:yellow;
 
     --todo-box-color:black;
+
+    transition-property: var(--bg-color);
+    transition-duration: 1.5s;
 }
 
 .def{
@@ -14,4 +24,7 @@
     --highlight-sub:blue;
 
     --todo-box-color:white;
+
+    transition-property: var(--bg-color);
+    transition-duration: 1.5s;
 }

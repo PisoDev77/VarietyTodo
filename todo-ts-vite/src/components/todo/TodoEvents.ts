@@ -50,6 +50,7 @@ export class TodoEvents {
             if(cmd === "todo-nav-item"){
                 const todoListNode = this.TodoContainer.lastChild;
                 if(todoListNode){
+                    
                     if(target.innerText === "Not Todo"){
                         this.notTodoList.setHeaderTodolist(target.innerText);
                         this.TodoContainer.replaceChild(this.notTodoList.getListEl(),todoListNode);
@@ -61,6 +62,7 @@ export class TodoEvents {
                         this.TodoContainer.replaceChild(this.todoList.getListEl(),todoListNode);
                         this.activeList = this.todoList;
                     }
+                    
                 }
                 
             }

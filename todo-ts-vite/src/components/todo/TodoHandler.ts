@@ -29,8 +29,8 @@ export class TodoHandler{
 
     editTodo(id: number){
         const todoEl = this.Todos.find((todo) => todo.getId() === id);
-        todoEl?.editMode();
         this.editingTodo = todoEl;
+        todoEl?.editMode();
 
         console.log(this.Todos)
     }

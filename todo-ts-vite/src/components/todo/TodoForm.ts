@@ -23,7 +23,7 @@ export class TodoForm {
     }
 
     setBtn(){
-        this.btn.innerText = "+";
+        this.btn.innerText = "ADD";
     }
 
     getContentInput(){
@@ -35,10 +35,12 @@ export class TodoForm {
     }
 
     private init(){
+        this.TodoForm.id = "todo-form"
+        
         this.setInputContent({
             type: "text",
             name: "content",
-            placeholder: "추가할 할 일의 내용을 입력하세요."
+            placeholder: "Write Todo"
         });
         this.setBtn();
 

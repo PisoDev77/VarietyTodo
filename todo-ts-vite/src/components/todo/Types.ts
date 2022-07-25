@@ -3,4 +3,10 @@ type TodoType = {
     content: string;
 }
 
-export type { TodoType };
+interface TodoStore {
+    save(): boolean;
+    load(): boolean;
+    select(): TodoType[];
+}
+
+export type { TodoType, TodoStore };

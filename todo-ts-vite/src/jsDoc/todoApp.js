@@ -1,16 +1,27 @@
 
+/**
+ * @param {import("./todo/TodoNav.js")} TodoNav
+ */
+
 class TodoApp {
     
     /**
      * @type {HTMLDivElement} TodoContainer // todo-container 객체
      * @type {TodoNav} todoNav // todo-nav 객체
      * @type {TodoList} todoList // todo-list 객체
+     * @type {TodoList} notTodoList // todo-list 객체
      * @type {TodoForm} todoForm // todo-Form 객체
+     * @type {TodoEvents} todoForm // todo-Form 객체
      */
+
     TodoContainer;    
+
     todoNav;
     todoList;
+    notTodoList;
     todoForm;
+
+    todoEvents;
     
     /**
      * @constructs TodoApp
