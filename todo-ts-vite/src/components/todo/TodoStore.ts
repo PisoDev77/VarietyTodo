@@ -1,7 +1,7 @@
 
-import {TodoStore, TodoType} from "./Types";
+import {TodoStoreInterface, TodoType} from "./Types";
 
-export class TodoStoreLocal implements TodoStore{
+export class TodoStoreLocal implements TodoStoreInterface{
 
     private header: string;
 

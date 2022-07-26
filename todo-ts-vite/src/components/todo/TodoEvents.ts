@@ -103,10 +103,18 @@ export class TodoEvents {
 
 
     todoFormEvent(){
-        this.todoForm.getContentInput().addEventListener("keydown", (e) => {
+        function debounce(callback: Function, wait: number){
+            let timeout: ReturnType<typeof setTimeout>;;
+
+            return function (this: any, ...args: any[]){
+                //타이머 취소
+                clearTimeout(timeout);
+                timeout = setTimeout(()=>callback.apply(this, args), wait);
+            };
+        }
+        this.todoForm.getContentInput().addEventListener("keydown", debounce((e: KeyboardEvent) => {
            
             const content = <HTMLInputElement>(e.target as EventTarget);
-            
             if(content.value.trim()){
                 if(e.key === "Enter"){
                     const props: TodoType = {
@@ -117,7 +125,7 @@ export class TodoEvents {
                     content.value = "";
                 }
             }
-        });
+        }, 500));
     }
 
 

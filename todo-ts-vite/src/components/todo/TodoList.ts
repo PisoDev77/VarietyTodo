@@ -3,8 +3,6 @@ import { TodoType } from "./Types";
 
 export class TodoList {
 
-    private header: string;
-
     TodoHandler: TodoHandler;
     isEditMode: boolean;
 
@@ -13,7 +11,6 @@ export class TodoList {
 
     constructor(header: string){
 
-        this.header = header;
 
         this.isEditMode = false;
 
