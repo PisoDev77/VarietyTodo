@@ -1,15 +1,18 @@
 import './style.css';
 import {divEl, aEl} from "./components/Types";
 
-import {Kanban as zbKanban} from "./components/zerobase/Kanban";
+import {KanbanApp as zbKanban} from "./components/zerobase/index";
 import {Kanban as selfKanban} from "./components/self/Kanban";
+import { defaultKanban } from './components/zerobase/mock';
 
 type isZero = "zerobase" | "self";
 
 const app = <divEl>document.querySelector("#app");
 
 const nav = document.createElement("nav");
-const kanban = document.createElement("div");
+// const kanban = document.createElement("div");
+
+const zb = new zbKanban(defaultKanban);
 
 for(let i = 0 ; i < 2 ; i++){
     const str: isZero = i === 0 ? "zerobase" : "self";
@@ -20,10 +23,9 @@ for(let i = 0 ; i < 2 ; i++){
     a.addEventListener("click", (e:MouseEvent)=>{
         const target = <aEl>e.target;
         if(target){
-            // app.appendChild(nav);
-            str === "zerobase" ? zbKanban() : selfKanban();
+            str === "zerobase" ?  zb.render() : selfKanban();
         }
     });
 }   
-app.appendChild(nav);
-app.appendChild(kanban);
+app.prepend(nav);
+// app.appendChild(kanban);

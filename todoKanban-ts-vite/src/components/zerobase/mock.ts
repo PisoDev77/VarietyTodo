@@ -1,4 +1,4 @@
-import { Kanban, Todo, DoneTodo, inProgressTodo } from "./type"
+import { TodoList , Todo, DoneTodo, inProgressTodo } from "./type"
 
 export const todoList:Todo[] = [
     {
@@ -30,8 +30,8 @@ export const doneList: DoneTodo[] = [
     }
 ]
 
-export const defaultKanban: Kanban[] = [
-    {id:0, title: "To do", todos: todoList},
-    {id:0, title: "In progress", todos: inProgressList},
-    {id:0, title: "Done", todos: doneList},
+export const defaultKanban: TodoList[] = [
+    {id:0, title: "To do", list: todoList},
+    {id:0, title: "In progress", list: inProgressList},
+    {id:0, title: "Done", list: doneList},
 ]

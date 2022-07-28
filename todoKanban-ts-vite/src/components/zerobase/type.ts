@@ -19,8 +19,8 @@ export interface inProgressTodo extends Todo{
 export interface DoneTodo extends Todo{
     isDone: true;
 }
-export interface Kanban {
+export interface TodoList {
     id: number;
     title: string;
-    todos: Todo[];
+    list: Todo[];
 }

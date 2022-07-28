@@ -1,17 +1,32 @@
-import { defaultKanban } from "./mock";
+import { TodoList } from "./type";
 
-class Kanban{
+export class KanbanApp{
 
-    kanban: Kanban[];
+    list: TodoList[];
 
-    constructor(data: Kanban[]){
-        this.kanban = data;
+    constructor(data: TodoList[]){
+        this.list = data;
 
         this.render();
     }
 
     render(){
-        
+        const addListButton = document.createElement("button");
+        addListButton.classList.add("board", "add");
+        addListButton.innerHTML = `<span class='plus-btn blue'>+</span>`;
+
+        const board = document.querySelector(".todo-container");
+
+        if(board){
+            board.innerHTML = ``;
+
+            const fragment = document.createDocumentFragment();
+            // const listElements = this.list.map((list) => generateList(list));
+
+            fragment.append();
+            board.append(fragment, addListButton);
+        }
+
     }
     
 }
