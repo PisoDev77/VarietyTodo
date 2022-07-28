@@ -1,4 +1,4 @@
-import { Kanban, Todo } from "./type"
+import { Kanban, Todo, DoneTodo, inProgressTodo } from "./type"
 
 export const todoList:Todo[] = [
     {
@@ -10,7 +10,7 @@ export const todoList:Todo[] = [
     },
 ]
 
-export const inProgressList: Todo[] = [
+export const inProgressList: inProgressTodo[] = [
     {
         id:0,
         content: {title: "제목", body: "내용"},
@@ -20,11 +20,11 @@ export const inProgressList: Todo[] = [
     }
 ]
 
-export const doneList: Todo[] = [
+export const doneList: DoneTodo[] = [
     {
         id:0,
         content: {title: "제목", body: "내용"},
-        isDone: false,
+        isDone: true,
         category: 'done',
         tags:[{id:0,content:"TAG 1"}],
     }

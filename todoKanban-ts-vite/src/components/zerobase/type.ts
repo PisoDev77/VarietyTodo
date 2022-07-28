@@ -11,6 +11,14 @@ export interface Todo{
         content: string;    
     }[],
 }
+
+export interface inProgressTodo extends Todo{
+    isDone: false;
+}
+
+export interface DoneTodo extends Todo{
+    isDone: true;
+}
 export interface Kanban {
     id: number;
     title: string;
