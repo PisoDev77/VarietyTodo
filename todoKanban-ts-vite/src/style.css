@@ -18,3 +18,85 @@ body{
   display: flex;
   justify-content: space-around;
 }
+
+.board{
+  background-color: white;
+  margin:10px;
+  border-radius: 12px;
+}
+.board-title{
+  width: 100%;
+  display: flex;
+  align-items: center ;
+  justify-content: space-between;
+}
+.total{
+  margin:3px;
+  padding:4px;
+  border-radius: 12px;
+  background-color: lightgray;
+}
+.kanban-delete{
+  border:1px solid lightgray;
+  margin: 3px;
+  padding: 4px;
+}
+
+.kanban-delete::after{
+  content: "X";
+}
+
+.board-header{  
+  display: flex;
+  align-items: center ;
+}
+
+.wrapper{
+  padding:5px;
+}
+.todo > button{
+  width: 100%;
+}
+.todo > button::after{
+  content: "+";
+}
+
+.item-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete-item::after{
+  content: "X";
+}
+
+
+.tags{
+  display: flex;
+  font-size: x-small;
+}
+.tag{
+  background-color: dimgray;
+  border-radius: 12px;
+  padding: 2px;
+  margin:1px;
+}
+.delete-tag{
+  background: none;
+  border: none;
+}
+.delete-tag::after{
+  content: "x";
+}
+
+.add-tag-btn{
+  background-color: lightgray;
+
+}
+.add-tag-btn > button{
+  border: none;
+  background: none;
+}
+.add-tag-btn > button::after{
+  content: "+";
+}

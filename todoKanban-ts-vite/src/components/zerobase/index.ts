@@ -74,7 +74,7 @@ export class KanbanApp{
                                     <div class="title">${content ? content.title : ""}</div>
                                 </div>
                                 <div class="todo-control">
-                                    <button class="delete-tiem" id="delete-todo-${todoId}">
+                                    <button class="delete-item" id="delete-todo-${todoId}">
                                         <span class="delete-btn"></span>
                                     </button>   
                             </div>
@@ -90,8 +90,8 @@ export class KanbanApp{
                                 return `
                                     <span class="tag" id="tag-${todoId}">
                                         ${content}
-                                        <button class="delete-tag delete-btn" id="todo-delete-${tagId}></button>
-                                    </span
+                                        <button class="delete-tag delete-btn" id="todo-delete-${tagId}"></button>
+                                    </span>
                                 `
                             })
                             .join('')
@@ -104,7 +104,7 @@ export class KanbanApp{
 
                     </div>
                 </section>
-            `;
+            `;  
         })
         .join('');
 
