@@ -22,5 +22,5 @@ export interface DoneTodo extends Todo{
 export interface TodoList {
     id: number;
     title: string;
-    list: Todo[];
+    list?: Todo[];
 }
