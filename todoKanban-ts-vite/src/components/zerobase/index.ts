@@ -50,7 +50,7 @@ export class KanbanApp{
 
     }
     
-    generateList({id, title, list}){
+    generateList({id, title, list}: TodoList){
         const $list = document.createElement("section");
         $list.classList.add("board");
 
