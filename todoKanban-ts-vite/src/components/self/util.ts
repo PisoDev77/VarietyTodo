@@ -1,4 +1,4 @@
-
+import { elProps } from "./type";
 
 export function getEl(elProps: elProps){
     const res = document.createElement(elProps.createEl);
