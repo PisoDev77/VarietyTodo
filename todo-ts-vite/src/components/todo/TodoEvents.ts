@@ -104,7 +104,7 @@ export class TodoEvents {
 
     todoFormEvent(){
         function debounce(callback: Function, wait: number){
-            let timeout: ReturnType<typeof setTimeout>;;
+            let timeout: ReturnType<typeof setTimeout>;
 
             return function (this: any, ...args: any[]){
                 //타이머 취소
