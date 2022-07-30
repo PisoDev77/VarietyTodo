@@ -24,7 +24,7 @@
     position: sticky;
     top: 3px;
     background-color: var(--color-bg);
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius);    
 }
 
 .self-add-kanban{
