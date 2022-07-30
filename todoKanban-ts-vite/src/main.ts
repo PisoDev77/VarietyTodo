@@ -10,9 +10,10 @@ type isZero = "zerobase" | "self";
 const app = <divEl>document.querySelector("#app");
 
 const nav = document.createElement("nav");
-// const kanban = document.createElement("div");
+const con = document.querySelector(".todo-container") as HTMLDivElement;
 
 const zb = new zbKanban(defaultKanban);
+const skb = selfKanban();
 
 for(let i = 0 ; i < 2 ; i++){
     const str: isZero = i === 0 ? "zerobase" : "self";
@@ -22,10 +23,9 @@ for(let i = 0 ; i < 2 ; i++){
 
     a.addEventListener("click", (e:MouseEvent)=>{
         const target = <aEl>e.target;
-        if(target){
-            str === "zerobase" ?  zb.render() : selfKanban();
+        if(target && con){
+            str === "zerobase" ?  zb.render() : skb.render(con);
         }
     });
 }   
 app.prepend(nav);
-// app.appendChild(kanban);

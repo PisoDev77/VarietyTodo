@@ -33,6 +33,7 @@ export class KanbanApp{
 
     attachEvent(){
         const $addListButton = document.querySelector('.board.add');
+        const $removeListButton = document.querySelector('.kanban-delete');
 
         $addListButton?.addEventListener('click', ()=>{
             const newId = uuidv4();

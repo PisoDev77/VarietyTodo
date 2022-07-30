@@ -1,0 +1,87 @@
+.flexRow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.self-container{
+    --color-bg: lightgray;
+    --border-radius:12px;
+    --btn-color:white;
+}
+
+.self-container{
+    background-color: var(--color-bg);
+
+    width: 100%;
+    padding:5px;
+    margin:5px;
+
+    border-radius: var(--border-radius);
+}
+.self-container > h2{
+    position: sticky;
+    top: 3px;
+    background-color: var(--color-bg);
+    border-radius: var(--border-radius);
+}
+
+.self-add-kanban{
+    position: sticky;
+    top: 40px;
+
+    width: 100%;
+
+    font-size: larger;
+    font-weight: 700;
+
+    border: none;
+    background-color: var(--btn-color);
+    border-radius: var(--border-radius);
+}
+.self-add-kanban:active{
+    transform: scaleY(0.8);
+}
+
+
+.self-kanban{
+    margin-top: 10px;
+    padding: 5px;
+
+    border-radius: var(--border-radius);
+    background-color: white;
+}
+.self-kanban-delete{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(231, 229, 229, 0.45);
+    border:none;
+}
+.self-kanban-delete:active{
+    transform: scale(0.8);
+}
+.self-kanban-item{
+    background-color: var(--color-bg);
+
+    border-radius: var(--border-radius);
+    padding: 10px;
+}
+
+.self-kanban-item{
+    flex-grow: 9.5;
+}
+.self-kanban-item-edit,.self-kanban-item-delete{
+    flex-grow: 0.25;
+    height: 100%;
+    margin: 10px;
+
+    padding:10px;
+
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--color-bg);
+}
+.self-kanban-item-edit:active,.self-kanban-item-delete:active{
+    transform: scale(0.9);
+}
